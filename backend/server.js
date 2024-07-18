@@ -24,7 +24,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 //midddle lyers
-app.use(express.json()); //reg fn that runs between request and respnse
+app.use(express.json({ limit:"10mb" })); //reg fn that runs between request and respnse
 app.use(express.urlencoded({ extended: true })); //to parse from dta(urlencoded)
 
 app.use(cookieParser());
