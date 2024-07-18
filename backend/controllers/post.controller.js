@@ -132,7 +132,7 @@ export const likeUnlikePost = async (req, res) => {
 export const getAllPosts = async (req, res) => {
 	try {
 		const posts = await Post.find()
-			.sort({ createdAt: -1 }) //popuate is used to get username id in the display
+			.sort({ createdAt: -1 })
 			.populate({
 				path: "user",
 				select: "-password",
